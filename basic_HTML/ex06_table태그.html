@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>태이블 실습</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1">
+    <caption>테이블 기본 실습</caption>
+    <tr> <!-- table row(행) --> >
+      <td>test1</td> <!-- table data --> <!-- <th> table head </th>-->
+    </tr>
+    <tr>
+      <td>test2 lorem</td>
+      <td>test3</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table border="1">
+    <caption> 물건 수량</caption>
+    <col style="width:80px">
+    <colgroup span="2" style="width:150px"></colgroup>
+    <col style="width:100px">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>상품명</th>
+        <th>수량</th>
+        <th>가격</th>
+      </tr>
+      <table>
+        <caption> 물건 수량</caption>
+        <tr>
+          <th>번호</th>
+          <th>상품명</th>
+          <th>수량</th>
+          <th>가격</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>콜라</td>
+          <td>1개</td>
+          <td>1,500원</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>사이다</td>
+          <td>2개</td>
+          <td>1,000원</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>탄산수</td>
+          <td>3개</td>
+          <td>1,000원</td>
+        </tr>
+        <table>
+        </table>
+        <br>
+        <table border="1">
+          <caption> 성적 나열</caption>
+          <tr>
+            <th scope="col">구분</th>
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+          </tr>
+          <tr>
+            <th scope="row">전공</th>
+            <td>A+</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <th scope="row">교양</th>
+            <td>C-</td>
+            <td>B</td>
+          </tr>
+        </table>
+
+
+</body>
+
+</html>

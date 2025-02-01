@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form 태그 실습 1</title>
+</head>
+
+<body>
+  <h2>이메일 작성</h2>
+  <form>
+    <!-- label+input:text -->
+    <p>
+      <label for="name">이름: </label><input type="text" pattern="[A-Za-z가-힣]+" title="숫자는 입력할 수 없습니다." name="name"
+        id="name" required>
+    </p>
+
+    <p>
+      <label for="email">이메일: </label><input type="email" name="email" id="email" required>
+    </p>
+
+    <p>
+      <!-- rows 는 한 영역에 보여줄 줄의 개수 / cols 는 한 줄에 보여주는 글자 수 -->
+      <label for="content">내용: <br> </label>
+      <textarea name="content" id="content" cols="30" rows="5" style="font-size: large;"></textarea>
+    </p>
+
+    <button type="submit">Send</button>
+    <button type="reset">Reset</button>
+    <!-- <input type="submit" value="Send">
+        <input type="reset" value="Reset"> -->
+  </form>
+</body>
+
+</html>
