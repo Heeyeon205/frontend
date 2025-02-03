@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 선택자</title>
+  <style>
+    p::before,
+    p::after {
+      content: "|";
+      color: blue;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      padding: 10px;
+      background-color: lightgray;
+    }
+
+    p {
+      margin: 5px, 5px, 5px, 5px;
+      color: red;
+      font-weight: 600;
+    }
+
+    h1#test1 {
+      color: blueviolet;
+    }
+
+    h1#test1:hover {
+      color: green;
+    }
+
+    h1#test1:active {
+      color: blue;
+    }
+
+    input[type="text"]:focus {
+      background-color: lightgreen;
+    }
+
+    p {
+      /* 가장 높은 우선 순위 */
+      color: brown !important;
+    }
+  </style>
+</head>
+
+<body>
+  <p style="color: pink;">
+    <!-- 인라인 요소가 2등으로 스타일 우선 적용 -->
+    margin 은 외부, padding은 내부
+  </p>
+  <h1 id="test1">
+    hover & active test (:콜론이 붙으면 이벤트가 있다.)
+  </h1>
+  <p>
+    focus는 input을 클릭했을 때
+    <input type="text">
+  </p>
+</body>
+
+</html>

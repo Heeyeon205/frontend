@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    header {
+      font-weight: bold;
+      font-size: 24px;
+      margin: 30px;
+    }
+
+    .box {
+      width: 600px;
+      height: 120px;
+      background-image: linear-gradient(red, orange);
+    }
+
+    .box span {
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120px;
+      display: inline-block;
+      transition: 0.5s ease;
+    }
+
+    .box:hover span {
+      transform: translateY(-20px);
+    }
+
+    .box:hover span:nth-child(2) {
+      /* transition: all 0.5 ease-in-out 0s;
+      transition: all 0.5 ease-in-out 0.1s;
+      transition: all 0.5 ease-in-out 0.2s;
+      transition: all 0.5 ease-in-out 0.3s;
+      transition: all 0.5 ease-in-out 0.4s;
+      transition: all 0.5 ease-in-out 0.5s;
+      transition: all 0.5 ease-in-out 0.6s;
+      transition: all 0.5 ease-in-out 0.7s;
+      transition: all 0.5 ease-in-out 0.8s; */
+      transition-delay: 0.1s;
+    }
+
+    .box:hover span:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .box:hover span:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
+    .box:hover span:nth-child(5) {
+      transition-delay: 0.4s;
+    }
+
+    .box:hover span:nth-child(6) {
+      transition-delay: 0.5s;
+    }
+
+    .box:hover span:nth-child(7) {
+      transition-delay: 0.6s;
+    }
+
+    .box:hover span:nth-child(8) {
+      transition-delay: 0.7s;
+    }
+
+    .box:hover span:nth-child(9) {
+      transition-delay: 0.8s;
+    }
+
+    .box span:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    .box span:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .box span:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
+    .box span:nth-child(5) {
+      transition-delay: 0.4s;
+    }
+
+    .box span:nth-child(6) {
+      transition-delay: 0.5s;
+    }
+
+    .box span:nth-child(7) {
+      transition-delay: 0.6s;
+    }
+
+    .box span:nth-child(8) {
+      transition-delay: 0.7s;
+    }
+
+    .box span:nth-child(9) {
+      transition-delay: 0.8s;
+    }
+  </style>
+</head>
+
+<body>
+  <header>박스 위에 마우스를 올려주세요.</header>
+  <div class="box">
+    <span>T</span>
+    <span>R</span>
+    <span>A</span>
+    <span>N</span>
+    <span>S</span>
+    <span>F</span>
+    <span>O</span>
+    <span>R</span>
+    <span>M</span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 선택자 3</title>
+  <style>
+    #test>p:nth-last-child(1) {
+      color: aqua;
+    }
+
+    p:nth-of-type(2) {
+      color: red;
+      font-size: 35px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>test1</p>
+  <div>
+    <p>test2</p>
+    <span>span1</span>
+    <p>test3</p>
+  </div>
+  <div id="test">
+    <p>test4</p>
+    <span>span2</span>
+    <span>span3</span>
+    <p>test5</p>
+  </div>
+</body>
+
+</html>

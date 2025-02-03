@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .func-box {
+      background-color: lightseagreen;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      border-radius: 10px;
+
+      /* linear는 일정한 속도 */
+      /* transition: width 0.8s linear; */
+
+      /* ease는 부드러운 가속 & 감속 */
+      transition: width 0.8s ease;
+
+      /* ease-in은 느리게 시작 점점 빠르게 */
+      /* transition: width 0.8s ease-in; */
+
+      /* ease-out은 빠르게 시작 점점 느리게 */
+      /* transition: width 0.8s ease-out; */
+
+      /* ease-in-out은 느리게 시작 -> 빨라짐 -> 느리게 마무리 */
+      /* transition: width 0.8s ease-in-out; */
+    }
+
+    .func-box:hover {
+      width: 300px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="func-box">
+    <p>마우스를 올리면 길어져요</p>
+  </div>
+</body>
+
+</html>

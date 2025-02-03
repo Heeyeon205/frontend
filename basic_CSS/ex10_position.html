@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    /* 포지션
+    1. static이 기본값이다. (top, right, bottom. left 좌표값 사용 불가) 
+    2. absolute: 상단 부모 박스를 기준으로 좌표 설정. (부모가 없으면 body가 부모다.) 
+    3. relative: 부모 박스를 기준으로 상위 박스가 움직이면 같이 좌표가 움직인다. 
+    4. fiexd: 상단 박스가 없으면 화면에 절대적인 위치가 부모가 된다.
+    5. sticky: 부모 박스가 상대적 위치 값에서 화면의 기준으로 절대 위치 
+    */
+
+    div {
+      width: 50px;
+      height: 50px;
+      border: 1px solid green;
+      background-color: yellowgreen;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      position: fixed;
+      text-align: center;
+      line-height: 50px;
+      background-color: orange;
+      top: 0px;
+      left: 100px;
+      z-index: -1;
+    }
+
+    .box2 {
+      position: relative;
+      background-color: red;
+      z-index: 1000;
+    }
+
+    .container {
+      border: 1px solid black;
+      width: 600px;
+      height: 400px;
+      /* transparent: 배경에 투명 적용 */
+      background-color: transparent;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div></div>
+    <div class="box">박스</div>
+    <div class="box2">박스2</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://kit.fontawesome.com/116a85af51.js" crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    .container {
+      width: 400px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .heart {
+      font-size: 40px;
+      color: red;
+      margin-top: 10px;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    .star {
+      font-size: 40px;
+      color: yellow;
+      margin-top: 10px;
+      animation: reverseStar 1s ease-in-out infinite;
+    }
+
+    .arrow {
+      font-size: 40px;
+      color: black;
+      margin-top: 10px;
+      animation: rotation 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1.2);
+      }
+
+      60% {
+        transform: scale(0.9);
+      }
+
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes reverseStar {
+      0% {
+        transform: scaleX(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">애니메이션 예시 1</div>
+    <span class="heart fa-solid fa-heart"></span>
+
+    <div class="title">애니메이션 예시 2</div>
+    <span class="star fa-solid fa-star"></span>
+
+    <div class="title">애니메이션 예시 3</div>
+    <span class="arrow fa-solid fa-rotate-right"></span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      font-size: 16px;
+    }
+
+    .child {
+      font-size: 80%;
+      /* parent = 16px * 0.8 = 12.8px */
+    }
+
+    .child-to-child {
+      font-size: 80%;
+      /* parent = 16px * 0.8 * 0.8 = 10.24px */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <p>test1</p>
+    <div class="child">
+      <p>test2</p>
+      <div class="child-to-child">
+        <p>test3</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

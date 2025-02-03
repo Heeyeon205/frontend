@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin 주의사항</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    p {
+      border: 2px solid red;
+      background-color: yellow;
+      padding: 100px;
+    }
+
+    #first {
+      margin-bottom: 20px;
+    }
+
+    #second {
+      margin-top: 30px;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      margin: 5px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    #third {
+      /* width + heigth 우리가 선택한 값으로 고정 */
+      /* padding 영향 없음 */
+      box-sizing: border-box;
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 10;
+    }
+
+    #forth {
+      /* width + heigth 패딩 영역까지 포함 계산 */
+      box-sizing: content-box;
+      width: 400px;
+      padding: 10px;
+    }
+
+    h1 {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="first">test1</p>
+  <p id="second">test2</p>
+
+  <div id="third">
+    Lorem ipsum dolor sit
+  </div>
+
+  <h1>test</h1>
+
+  <div id="forth">
+    Lorem ipsum dolor sit
+  </div>
+
+</body>
+
+</html>
