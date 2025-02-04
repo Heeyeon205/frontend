@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+
+    .container {
+      height: 100%;
+      background-color: gray;
+    }
+
+    header,
+    aside.left,
+    aside.right,
+    main,
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      background-color: tomato;
+      height: 10%;
+    }
+
+    section {
+      height: 80%;
+      display: flex;
+      text-align: center;
+    }
+
+    aside.left {
+      background-color: yellow;
+      flex: 1;
+    }
+
+    main {
+      background-color: lightblue;
+      flex: 4;
+    }
+
+    main>p {
+      padding: 5px;
+    }
+
+    aside.right {
+      background-color: yellowgreen;
+      flex: 1;
+    }
+
+    footer {
+      height: 10%;
+      background-color: aqua;
+    }
+
+    @media(max-width:768px) {
+      section {
+        flex-direction: column;
+      }
+
+      main {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>header</header>
+    <section>
+      <aside class="left">left</aside>
+      <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus consequuntur ratione ex est doloribus
+          asperiores et inventore veniam molestiae explicabo, sint neque vel ipsa hic laboriosam placeat a eligendi
+          quis.</p>
+      </main>
+      <aside class="right">right</aside>
+    </section>
+    <footer>footer</footer>
+  </div>
+</body>
+
+</html>

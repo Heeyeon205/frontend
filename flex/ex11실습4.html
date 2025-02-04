@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0px;
+      height: 100vh;
+    }
+
+    section {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: stretch
+    }
+
+    article.content1 {
+      background-color: yellow;
+      flex: 1;
+      padding: 10px;
+    }
+
+    article.content2 {
+      flex: 1;
+    }
+
+    div.sub1 {
+      background-color: aquamarine;
+      padding: 10px;
+    }
+
+    div.sub2 {
+      background-color: palevioletred;
+      padding: 10px;
+    }
+
+    @media(max-width:768px) {
+      section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article class="content1">
+      <h2>content1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex labore tempora consequuntur tempore. Quasi fugit
+        quod, doloribus et in animi est blanditiis similique, harum atque incidunt ipsa maiores nobis adipisci? Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Temporibus quo unde iure animi ea ipsum sint
+        consequuntur repellat nobis corporis, laborum dolorem. Aliquam soluta enim sed rem iusto, modi autem. Lorem
+        ipsum
+        dolor sit amet consectetur adipisicing elit. Minus excepturi animi laboriosam, fuga rerum ut
+        expedita enim quae magni tempore obcaecati cumque culpa dolorem dolorum quisquam eveniet fugit eligendi at.</p>
+    </article>
+    <article class="content2">
+      <div class="sub1">
+        <h2>sub1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam commodi, non asperiores
+          voluptates esse alias quos laudantium? Nulla corporis obcaecati molestiae veritatis nobis quae fuga laboriosam
+          maxime non earum!</p>
+      </div>
+      <div class="sub2">
+        <h2>sub2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam commodi, non asperiores
+          voluptates esse alias quos laudantium? Nulla corporis obcaecati molestiae veritatis nobis quae fuga laboriosam
+          maxime non earum!</p>
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>
