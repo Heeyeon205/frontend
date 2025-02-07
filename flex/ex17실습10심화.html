@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-items {
+      /* border: 1px solid red; */
+      display: flex;
+      /* width: 1200px; */
+      /* height: 60%; */
+    }
+
+    .card {
+      border: 1px solid orange;
+      margin: 10px;
+      padding: 20px;
+      width: 300px;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .card>p {
+      overflow: auto;
+      margin-bottom: 10px;
+    }
+
+    .card>img:hover {
+      transform: scale(1.1);
+    }
+
+    .card>img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card-items">
+    <div class="card">
+      <h2>card#1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, in! Aliquam ducimus impedit nemo asperiores
+        molestiae. Autem ab ad suscipit, at repellat optio consequuntur minima quidem impedit doloribus. At, quisquam.
+      </p>
+      <img src="./images/images.jpeg" alt="">
+    </div>
+    <div class="card">
+      <h2>card#2</h2>
+      <p>Lorem ipsum </p>
+      </p>
+      <img src="./images/다운로드 (1).jpeg" alt="">
+    </div>
+    <div class="card">
+      <h2>card#3</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates maxime quidem aspernatur, dolor suscipit
+        laudantium distinctio id. Animi itaque illum, nam facere porro quod assumenda veritatis aut libero provident
+        officia! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, in! Aliquam ducimus impedit nemo
+        asperiores
+        molestiae. Autem ab ad suscipit, at repellat optio consequuntur minima quidem impedit doloribus. At, quisquam.
+      </p>
+      <img src="./images/다운로드.jpeg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

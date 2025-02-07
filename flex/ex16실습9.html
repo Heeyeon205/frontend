@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #eee;
+    }
+
+    header {
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    div>img {
+      width: 150px;
+      height: 75px;
+      flex: 1;
+    }
+
+    .gnb>a {
+      margin: 5px;
+    }
+
+    div.search {
+      margin: 10px;
+    }
+
+    @media(max-width:768px) {
+      header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/logo.png" alt="로고">
+    </div>
+    <div class="gnb">
+      <a href="">home</a>
+      <a href="">about us</a>
+      <a href="">service</a>
+      <a href="">contact us</a>
+      <a href="">blog</a>
+    </div>
+    <div class="search">
+      <input type="search" placeholder="serach">
+    </div>
+  </header>
+</body>
+
+</html>
