@@ -4,25 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>그리드 실습1</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      border: 1px solid;
     }
-
-    body {}
 
     .container {
       height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 0fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr;
-      grid-template-areas:
-        "header header header"
-        "section section nav"
-        "footer footer footer";
+      grid-template:
+        "header header header header" 1fr
+        "content content content nav" 4fr
+        "footer footer footer footer" 1fr
     }
 
     header {
@@ -32,7 +29,7 @@
 
     section {
       background-color: sandybrown;
-      grid-area: section;
+      grid-area: content;
     }
 
     nav {
