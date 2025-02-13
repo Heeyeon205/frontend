@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .one {
+      height: 300px;
+      width: 500px;
+      background-color: yellowgreen;
+    }
+
+    .two {
+      height: 70%;
+      width: 70%;
+      background-color: yellow;
+    }
+
+    .three {
+      height: 50%;
+      width: 60%;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="one">
+    <div class="two">
+      <div class="three"></div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const div = document.querySelectorAll('div');
+  div.forEach(d => d.addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log(e.currentTarget);
+  }));
+</script>

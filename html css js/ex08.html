@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .body {
+      width: 400px;
+      height: 400px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .correct {
+      color: blue;
+    }
+
+    .wrong {
+      text-decoration: line-through;
+      color: red;
+    }
+
+    li {
+      margin: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+
+    .footer {
+      display: flex;
+    }
+
+    .footer span {
+      margin: 0px 10px;
+      font-size: 20px;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+      border-color: blue;
+      border-radius: 10%;
+      padding: 5px 10px;
+    }
+
+    footer {
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1> 산술 문제를 풀어봅시다.</h1>
+    <p> 수식을 계산하여 답을 입력하고 채점 버튼을 누르세요.</p>
+    <ul class="examSet">
+      <li class="exam">
+        <span></span>
+        <input type="number" placeholder="입력">
+      </li>
+      <li class="exam">
+        <span></span>
+        <input type="number" placeholder="입력">
+      </li>
+      <li class="exam">
+        <span></span>
+        <input type="number" placeholder="입력">
+      </li>
+      <li class="exam">
+        <span></span>
+        <input type="number" placeholder="입력">
+      </li>
+    </ul>
+    <div class="footer">
+      <button class="check-btn">채점</button>
+      <span id="score">0점</span>
+      <button class="reset-btn">다시</button>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const exList = document.querySelectorAll('ul > li');
+  const spanList = document.querySelectorAll('span');
+  const answerList = [];
+  const operator = ['+', '-', '*', '/'];
+
+  createExam();
+
+  function createExam() {
+    for (let i = 0; i < exList.length; i++) {
+      let rd = Math.floor(Math.random() * 3);
+      let rd1 = Math.floor(Math.random() * 10) + 1;
+      let rd2 = Math.floor(Math.random() * 10) + 1;
+      switch (operator[rd]) {
+        case '+': answerList[i] = rd1 + rd2; break;
+        case '-': answerList[i] = rd1 - rd2; break;
+        case '*': answerList[i] = rd1 * rd2; break;
+        case '/': answerList[i] = parseInt(rd1 / rd2); break;
+      }
+      spanList[i].innerHTML = `${rd1} ${operator[rd]} ${rd2} =`;
+    }
+  }
+
+  const checkBtn = document.querySelector('.check-btn');
+  const resetBtn = document.querySelector('.reset-btn');
+  const inputList = document.querySelectorAll('input');
+  const score = document.querySelector('#score');
+
+  checkBtn.addEventListener('click', () => {
+    for (let i = 0; i < inputList.length; i++) {
+      if (inputList[i].value == "") {
+        alert('빈칸이 있습니다. 정답을 입력해 주세요.')
+        return
+      }
+    }
+
+    let totalScore = 0;
+
+    for (let i = 0; i < inputList.length; i++) {
+      let userAnswer = parseInt(inputList[i].value);
+      let correctAnswer = answerList[i];
+
+      if (userAnswer === correctAnswer) {
+        totalScore += 25;
+        exList[i].classList.add('correct');
+        inputList[i].classList.add('correct');
+      } else {
+        exList[i].classList.add('wrong');
+        inputList[i].classList.add('wrong');
+      }
+    }
+    score.innerHTML = `${totalScore}점`;
+  });
+
+  resetBtn.addEventListener('click', () => {
+    createExam();
+    score.innerHTML = '0점';
+    for (let i = 0; i < inputList.length; i++) {
+      inputList[i].value = "";
+      exList[i].classList.remove('wrong');
+      inputList[i].classList.remove('wrong');
+    }
+  });
+</script>

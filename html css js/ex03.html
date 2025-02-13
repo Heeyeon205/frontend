@@ -11,10 +11,16 @@
       height: 150px;
       background-color: yellow;
       margin-bottom: 10px;
+      transition: 1s ease-in-out;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
     }
 
     .msg {
       border: 1px solid blue;
+      color: blue;
       width: 300px;
       height: 100px;
       font-size: 1.3em;
@@ -35,6 +41,40 @@
 </html>
 
 <script>
-  let box = document.querySelector('.box');
+  const msg = document.querySelector('.msg');
+  const box = document.querySelector('.box');
+  const btnList = document.querySelectorAll('button');
+  const growBtn = btnList[0];
+  const rotaionBtn = btnList[1];
+  let isGrown = false;
 
+  box.addEventListener("mouseover", () => {
+    box.style.transform = 'translateX(200px)'
+  });
+
+  box.addEventListener("mouseout", () => {
+    box.style.transform = 'translateX(0px)'
+  });
+
+  growBtn.addEventListener('click', () => {
+    if (!isGrown) {
+      box.style.transform = "scale(1.5)";
+      growBtn.innerText = '네모 줄이기';
+    } else {
+      box.style.transform = "scale(1)";
+      growBtn.innerText = '네모 키우기';
+    }
+    isGrown = isGrown ? false : true;
+    msg.innerText = isGrown ? "네모가 커진다" : "네모가 작아진다";
+  });
+
+  // rotaionBtn.addEventListener('click', () => {
+  //   box.style.transform = "rotate(180deg)"
+  //   msg.innerText = "네모가 돌아간다";
+  // })
+
+  rotaionBtn.addEventListener('click', () => {
+    box.classList.toggle('rotate');
+    msg.innerText = "네모가 돌아간다";
+  })
 </script>
