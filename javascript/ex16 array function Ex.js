@@ -35,3 +35,32 @@ console.log(result3 + "살")
 // 4.동물 나이순으로 내림차순 정렬 : 기존 배열 건드리지 않는다 
 let result4 = [...pets].sort((a, b) => a.age > b.age ? -1 : 0);
 console.log(result4);
+
+// some, every
+// some: 무조건 하나라도 그 값이 존재하면 즉시 종료 true
+let cnt = 0;
+let res = pets.some(a => {
+  cnt++
+  return a.kind === '개';
+});
+console.log(res)
+console.log(cnt)
+
+cnt = 0;
+
+// 무조건 끝가지 호출해서 확인
+pets.forEach(a => {
+  cnt++;
+  return a.kind == '개';
+});
+console.log(res)
+console.log(cnt)
+
+
+cnt = 0;
+res = pets.every(a => {
+  cnt++;
+  return a.kind === '개';
+});
+console.log(res)
+console.log(cnt)

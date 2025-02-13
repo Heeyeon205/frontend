@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex01</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: yellowgreen;
+      text-align: center;
+      /* line-height: ; */
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+</body>
+
+</html>
+
+<script>
+  // 태그 객체를 가쟈오면 js로 태그들을 조작할 수 있다.
+  const box = document.querySelector(".box");
+  box.style.backgroundColor = 'pink';
+  box.innerHTML += ' 박스입니다.';
+
+  // nodeList 객체로 여러개의 박스를 가져온다.
+  let boxList = document.querySelectorAll('.box')
+  boxList[1].style.fontSize = '30px';
+  boxList[2].style.borderRadius = '50%';
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실행 환경 보기</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+  let x = 'global x';
+  let y = 'global y';
+
+  function outer() {
+    let z = 'local z';
+    console.log("local 영역이야");
+
+    function inner() {
+      console.log();
+      let x = 'local x';
+      console.log("inner 영역이야");
+    }
+
+    inner();
+  }
+
+  console.log("global 영역이야");
+  outer();
+</script>

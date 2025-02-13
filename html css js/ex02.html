@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex02</title>
+  <style>
+    button {
+      border: none;
+      font-size: 1.2em;
+      padding: 20px;
+      background-color: royalblue;
+      margin: 5px;
+      cursor: pointer;
+      color: white;
+    }
+
+    button:hover {
+      background-color: wheat;
+      color: black;
+    }
+
+    .container {
+      border: 1px solid black;
+      height: 800px;
+      width: 500px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+      border: 1px solid red;
+      margin: 5px;
+    }
+
+    #first {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btnAdd"> 박스 추가</button>
+  <button class="btnDelete">박스 삭제</button>
+  <button class="btnAllDelete">박스 전체 삭제</button>
+  <div class="container">
+    <div class="box" id="first"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const btnList = document.querySelectorAll('button');
+  const addBtn = btnList[0];
+  const deleteBtn = btnList[1];
+  const deleteAllBtn = btnList[2];
+
+  const container = document.querySelector('.container');
+
+  const boxList = document.querySelectorAll('.box');
+
+  addBtn.addEventListener('click', () => {
+    const newBox = document.createElement('div');
+    newBox.classList.add('box');
+    container.appendChild(newBox);
+  });
+
+  deleteBtn.addEventListener('click', () => {
+    const curBoxList = document.querySelectorAll('.box');
+    if (curBoxList.length > 0) {
+      container.removeChild(curBoxList[curBoxList.length - 1]);
+    } else {
+      alert("더 이상 삭제할 박스가 없습니다.");
+    }
+  });
+
+  deleteAllBtn.addEventListener('click', () => {
+    const curBoxList = document.querySelectorAll('.box');
+    if (curBoxList.length > 0) {
+      for (let i = 0; i < curBoxList.length; i++) {
+        curBoxList[i].remove();
+      }
+    } else {
+      alert("더 이상 삭제할 박스가 없습니다.");
+    }
+  });
+</script>
