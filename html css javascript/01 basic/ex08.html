@@ -109,7 +109,7 @@
         case '+': answerList[i] = rd1 + rd2; break;
         case '-': answerList[i] = rd1 - rd2; break;
         case '*': answerList[i] = rd1 * rd2; break;
-        case '/': answerList[i] = parseInt(rd1 / rd2); break;
+        case '/': answerList[i] = Math.floor(rd1 / rd2); break;
       }
       spanList[i].innerHTML = `${rd1} ${operator[rd]} ${rd2} =`;
     }
@@ -151,8 +151,8 @@
     score.innerHTML = '0점';
     for (let i = 0; i < inputList.length; i++) {
       inputList[i].value = "";
-      exList[i].classList.remove('wrong');
-      inputList[i].classList.remove('wrong');
+      exList[i].classList.remove('wrong', 'correct');
+      inputList[i].classList.remove('wrong', 'correct');
     }
   });
 </script>

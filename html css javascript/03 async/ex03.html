@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <button class="stop">중지</button>
+</body>
+</html>
+
+<script>
+  let cnt = 59;
+const interval = setInterval(() => {
+  cnt++;
+  if(cnt >= 60){
+    document.querySelector('h1').innerHTML = `${Math.floor(cnt/60)}분 ${cnt%60}초`;
+  }else{
+    document.querySelector('h1').innerHTML = `${cnt}초`;
+  }
+}, 1000);
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+  setTimeout(() => {
+    clearInterval(interval);
+  })
+});
+</script>
