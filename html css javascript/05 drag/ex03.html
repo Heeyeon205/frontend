@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>드레그 실습</title>
+  <style>
+    .container{
+      display: flex;
+    }
+    .box{
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+    .check{
+      background-color: red;
+    }
+    .drag{
+      background-color: green;
+    }
+    input{
+      border: 1px solid black;
+    }
+    .trash{
+      height: 100px;
+      width: 500px;
+      border: 1px solid black;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <input type="text">
+  <div class="trash">
+
+  </div>
+</body>
+
+</html>
+
+<script>
+  let cnt = 1;
+  let $boxList = [...document.querySelectorAll('.box')];
+  let $trash = document.querySelector('.trash');
+  let $input = document.querySelector('input');
+  let $con = document.querySelector('.container');
+
+  // 1. 박스 클릭 시 숫자
+$boxList.forEach(box => {
+  box.addEventListener('click', (e) => {
+    if(!e.target.innerText){
+      e.target.innerText = cnt;
+      cnt++;
+    }
+  })
+});
+
+// 2. 값 입력 시 같으면 박스 색 변경 
+$input.addEventListener('keyup', (e) => {
+  $boxList.forEach(box => {
+    if(box.innerText !== "" && box.innerText === e.target.value){
+      box.classList.add('check');
+      return;
+    }
+  })
+});
+
+// 3. 값 입력 시 같고 지우면 같이 사라짐
+$input.addEventListener('keydown', (e) => {
+  $boxList.forEach(box => {
+    if(box.innerText === e.target.value){
+      box.classList.remove('check');
+      box.innerText = "";
+      return;
+    }
+  })
+});
+
+// 4. 숫자가 있을 때 드래그 시 박스 색 변경
+let dragItem = null;
+$boxList.forEach(box => {
+  box.setAttribute('draggable', "true");
+  box.addEventListener('dragstart', (e) => {
+    if(box.innerText === ""){
+      e.preventDefault();
+      return;
+    }
+    dragItem = e.target;
+    e.target.classList.add('drag');
+  })
+  box.addEventListener('dragend', (e) => {
+    e.target.classList.remove('drag');
+});
+});
+
+// 5. 드롭 시 박스 삭제
+$trash.addEventListener('dragover', (e) => {
+  e.preventDefault();
+})
+
+$trash.addEventListener('drop', (e) => {
+  if (dragItem) {
+    dragItem.remove();
+    dragItem = null;
+  }
+});
+</script>

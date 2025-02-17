@@ -6,27 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ex08</title>
   <script defer src="ex07.js"></script>
-  <style>
-    #user-list {
-      border: 1px solid black;
-    }
-    .item {
-      background-color: lightgreen;
-    }
-    .on{
-      background-color: lightblue;
-    }
-    #selected-list{
-      border: 1px solid red;
-    }
-    .fix{
-      background-color: lightcoral;
-    }
-  </style>
+  <link rel="stylesheet" href="ex07.css">
 </head>
 
 <body>
   <div class="container">
+    <div class="top">
     <div class="innput-group">
       <input type="text" id="username">
       <button id="btn-add"> ADD</button>
@@ -35,16 +20,18 @@
       <button id="btn-start">시작</button>
       <button id="btn-stop">정지</button>
     </div>
-
+  </div>
+  <div class="main">
     <div id="box">
       <ul id="user-list">
-        <li class="item">name list</li>
+        <li class="item" id="user">name list</li>
 
       </ul>
       <ul id="selected-list">
         <li class="item fix">fix name list</li>
       </ul>
     </div>
+  </div>
   </div>
 
 </body>
