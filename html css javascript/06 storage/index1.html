@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="./index2.html"> 페이지 2로 이동</a>
+</body>
+
+</html>
+
+<script>
+  // 객체는 JSON 형태로 변환해야 한다.
+  let cat = {name: "복이", age: 14};
+  let catJson = JSON.stringify(cat);
+
+  let dog = [10, 20, 30, 40, 50];
+
+  // 브라우저와 pc를 종료해도 로컬 브라우어 내장 메모리에 저장
+  localStorage.setItem("cat", catJson);
+
+  // 브러우저 탭 종료 전까지 값을 저장. 탭 종료 시 메모리 휘발
+  sessionStorage.setItem("dog", JSON.stringify(dog));
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="save-input">
+  <button class="save-btn"> 저장하기</button>
+  <br>
+  <input type="text" class="delete-input">
+  <button class="delete-btn"> 삭제하기</button>
+  <p class="data-list"></p>
+</body>
+</html>
+
+<script>
+    let inputData = JSON.parse(localStorage.getItem("data")) || [];
+
+    // 값 저장
+    let $saveInput = document.querySelector(".save-input");
+    document.querySelector(".save-btn").addEventListener("click", () => {
+      if ($saveInput.value.trim() === "") return;
+      inputData.push($saveInput.value);
+      localStorage.setItem("data", JSON.stringify(inputData));
+      initData(); 
+      $saveInput.value = ""; 
+    });
+
+    // 값 불러오기
+    let $dataList = document.querySelector(".data-list");
+    let $p = document.querySelector('p');
+    function initData() {
+      $dataList.textContent = `[${inputData}]`;
+      $p.innerText = $p.innerText == "[]" ? "삭제할 값이 없습니다." : $p.innerText;
+    }
+    
+    // 값 삭제
+    let $deleteInput = document.querySelector(".delete-input");
+    document.querySelector(".delete-btn").addEventListener("click", () => {
+      if ($deleteInput.value.trim() === "") {
+        $p.innerText = "삭제할 값을 입력해 주세요.";
+        setTimeout(() => {
+          location.reload();
+        }, 1000)
+        return;
+      }
+      if (inputData.includes($deleteInput.value)) {
+        inputData = inputData.filter(data => data !== $deleteInput.value);
+        localStorage.setItem("data", JSON.stringify(inputData));
+        initData();
+        $deleteInput.value = ""; 
+      } else {
+        $p.innerText = "입력한 값이 존재하지 않습니다.";
+        setTimeout(() => {
+          location.reload();
+        }, 1000)
+      }
+    });
+
+    initData();
+</script>
+
