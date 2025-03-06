@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <h1>user list</h1>
+    <div class="search">
+      <input type="text" name="" id="search-id-input" placeholder="please input ID">
+    </div>
+    <p id="search-result"></p>
+  </main>
+</body>
+
+</html>
+
+<script>
+  const userList = [
+    { id: 1, name: "홍길동", address: "서울" },
+    { id: 2, name: "둘리", address: "대전" },
+    { id: 3, name: "또치", address: "부산" },
+  ];
+
+  const input = document.querySelector('#search-id-input');
+  const result = document.querySelector('#search-result');
+  input.addEventListener('keyup', (e) => {
+    const data = userList.find(a => a.id == e.target.value);
+    result.innerHTML = data ? data.name : "데이터가 없습니다.";
+  });
+
+</script>
