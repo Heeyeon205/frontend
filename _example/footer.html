@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+
+footer {
+      background-color: #f8f8f8;
+      padding: 10px 100px; 
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .infoSection p {
+      font-size: 0.75em; 
+      color: #555;
+      margin: 3px 0; 
+    }
+
+    .callSection h3,
+    .appSection h3 {
+      font-size: 0.9em; 
+      margin-bottom: 5px; 
+    }
+
+    .footer-phone {
+      font-size: 1.3em; 
+      font-weight: bold;
+      color: red;
+    }
+
+    .app-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px; 
+    }
+
+    .app-icons a {
+      display: flex;
+      align-items: center;
+      gap: 5px; 
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.8em; 
+    }
+
+    .app-icons i {
+      font-size: 1.2em; 
+    }
+
+    .topBtn {
+      position: fixed;
+      bottom: 15px; 
+      right: 15px; 
+      background-color: rgba(121, 121, 121, 0.758);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px; 
+      font-size: 0.7em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <footer>
+    <div class="footer-container">
+      <div class="infoSection">
+        <img src="img/rent_logo.jpg" alt="로고"
+          style="width: 75px; height: auto;">
+        <p>좋은렌트(주) 대표이사 홍길동</p>
+        <p>서울 강남구 강남대로78길 8 한국빌딩 4F, 8F</p>
+        <p>서울본사: 서울 서초구 강남대로 279 하늘빌딩</p>
+        <p>사업자등록번호: 213-67-77183 / 통신판매업신고번호: 제2010-서울강남-420호</p>
+        <p>보험대차 1588-4320 / 일반상품렌탈 1577-2100+1</p>
+        <p>대출성 금융상품판매대리 · 중개업자등록증 / 방문 · 전화권유판매원 조회</p>
+      </div>
+  
+      <div class="callSection">
+        <h3>고객센터</h3>
+        <p class="footer-phone">1588-1530</p>
+        <p>평일 08:30 ~ 19:00</p>
+        <p>단, 사고처리 문의는 24시간 가능</p>
+        <p>Overseas +82-2-646-8000</p>
+      </div>
+  
+      <div class="appSection">
+        <h3>앱 다운로드</h3>
+        <div class="app-icons">
+  
+          <a href="https://play.google.com/store/games?hl=ko"> <i
+            class="fa-brands fa-google"></i> <span>Google Play</span>
+          </a> <a href="https://apps.apple.com/kr/charts/iphone"> <i
+            class="fa-brands fa-apple"></i> <span>AppStore</span>
+          </a>
+  
+        </div>
+      </div>
+      <button class="topBtn" id="topBtn">TOP</button>
+    </div>
+  </footer>
+</body>
+</html>
