@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+/* 글자 */
+h3.a{
+color: #7acc52;
+}
+h3.d{
+color: #5fcc29
+}
+h3.b{
+color: #44cc00
+}
+h3.e{
+color: #00ac61
+}
+h3.c{
+color: #00a05b
+}
+
+/* 버튼 */
+button{
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+}
+.btn-a{
+  background-color: #7acc52;
+}
+.btn-b{
+  background: #44cc00
+}
+.btn-c{
+  background: #00a05b
+}
+.btn-d{
+  background: #5fcc29
+}
+.btn-e{
+  background: #00ac61
+}
+
+/* 게이지 바 */
+p{
+  font-weight: bold;
+}
+p.a{
+  color: #0C2340;
+}
+#progress1 {
+    appearance: none;
+}
+#progress1::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress1::-webkit-progress-value {
+    border-radius:10px;
+    background: #0C2340;
+}
+#progress2 {
+    appearance: none;
+}
+#progress2::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress2::-webkit-progress-value {
+    border-radius:10px;
+    background: #1D4E89;
+}
+p.b{
+  color: #1D4E89;
+}
+p.c{
+  color: #2878C0;
+}
+#progress3 {
+    appearance: none;
+}
+#progress3::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress3::-webkit-progress-value {
+    border-radius:10px;
+    background: #2878C0;
+}
+p.d{
+  color: #4CAF50;
+}
+#progress4 {
+    appearance: none;
+}
+#progress4::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress4::-webkit-progress-value {
+    border-radius:10px;
+    background: #4CAF50;
+}
+p.e{
+  color: #F9A825;   
+}
+#progress5 {
+    appearance: none;
+}
+#progress5::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress5::-webkit-progress-value {
+    border-radius:10px;
+    background: #F9A825;
+}
+p.f{
+  color: #EF6C00;
+}
+#progress6 {
+    appearance: none;
+}
+#progress6::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress6::-webkit-progress-value {
+    border-radius:10px;
+    background: #EF6C00;
+}
+
+i{
+  color: #00a05b;
+}
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<h3 class="a">무엇이든 우리동네에서 무우마켓</h3>
+<button class="btn-a">모임 가입하기</button>
+<button class="btn-a">쪽지로 거래하기</button>
+<hr>
+<h3 class="d">무엇이든 우리동네에서 무우마켓</h3>
+<button class="btn-d">모임 가입하기</button>
+<button class="btn-d">쪽지로 거래하기</button>
+<hr>
+<h3 class="b">무엇이든 우리동네에서 무우마켓</h3>
+<button class="btn-b">모임 가입하기</button>
+<button class="btn-b">쪽지로 거래하기</button>
+<hr>
+<h3 class="e">무엇이든 우리동네에서 무우마켓</h3>
+<button class="btn-e">모임 가입하기</button>
+<button class="btn-e">쪽지로 거래하기</button>
+<hr>
+<h3 class="c">무엇이든 우리동네에서 무우마켓</h3>
+<button class="btn-c">모임 가입하기</button>
+<button class="btn-c">쪽지로 거래하기</button>
+<hr>
+<p class="a">매너 온도 20℃ 😰</p>
+<progress  id="progress1" value="20" min="0" max="100"></progress>
+<p class="b">매너 온도 35℃ 🙁</p>
+<progress  id="progress2" value="35" min="0" max="100"></progress>
+<p class="c">매너 온도 36.5℃ 🙂</p>
+<progress  id="progress3" value="36.5" min="0" max="100"></progress>
+<p class="d">매너 온도 63℃ 😀</p>
+<progress  id="progress4" value="63" min="0" max="100"></progress>
+<p class="e">매너 온도 80℃ 😄</p>
+<progress  id="progress5" value="80" min="0" max="100"></progress>
+<p class="f">매너 온도 95℃ 😆</p>
+<progress  id="progress6" value="95" min="0" max="100"></progress>
+<hr>
+<span>중고거래 : </span><i class="fa-solid fa-shop"></i><br>
+<span>동네생활 : </span><i class="fa-solid fa-chalkboard"></i><br>
+<span>모임 : </span><i class="fa-solid fa-users"></i><br>
+
+</body>
+</html>
